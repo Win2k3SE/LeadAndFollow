@@ -4,7 +4,7 @@ import webpfy from 'webpfy'
 export const testWebpfy = (args) => {
    // console.log("args", args)
    return app.gulp
-      .src(`./src/index.html`)
+      .src(`./src/test.html`)
       .pipe(
          app.plugins.plumber(
             app.plugins.notify.onError({
@@ -13,7 +13,11 @@ export const testWebpfy = (args) => {
             })
          )
       )
-      .pipe(gfi())
-      .pipe(webpfy({ debug: true }))
-      .pipe(app.gulp.dest(`./src/test/webpfy/output`))
+      // .pipe(gfi())
+      .pipe(webpfy({
+         debug: true,
+         insertDefaultImage: true
+      }))
+      .pipe(app.gulp.dest(`./test/`))
 }
+
