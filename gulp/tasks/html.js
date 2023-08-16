@@ -21,7 +21,7 @@ export const html = () => {
             // .pipe(app.plugins.if(app.isBuild, htmlmin({ collapseWhitespace: true })))
             .pipe(htmlmin({ collapseWhitespace: true }))
             .pipe(app.plugins.replace(/@img\//g, "img/"))
-            .pipe(app.plugins.if(app.isWebpfy, webpfy()))
+            .pipe(app.plugins.if(app.isWebpfy, webpfy({ insertDefaultImage: true })))
             .pipe(
                 app.plugins.if(
                     app.isBuild,
