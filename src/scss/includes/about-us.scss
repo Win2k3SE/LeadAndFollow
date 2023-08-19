@@ -140,8 +140,8 @@
     @media (max-width: 1000 + px) {
         width: 116px;
     }
-    // .feature_image
-    &_image {
+    // .feature__image
+    &__image {
         @include size(185, 125);
         border-radius: 10px 10px 0 0;
         @media (max-width: 1000 + px) {
