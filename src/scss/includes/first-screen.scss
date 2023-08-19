@@ -152,6 +152,7 @@
                 border-radius: 5px;
                 overflow: hidden;
                 margin-bottom: 18px;
+                border: 2px solid rgba(#ccc, .5);
                 @media (any-hover:hover) {
                     &:not(.swiper-slide-thumb-active):hover {
                         img {
