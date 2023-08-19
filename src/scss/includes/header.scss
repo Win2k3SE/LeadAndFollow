@@ -60,6 +60,51 @@
     // .header__menu
     &__menu {
         flex-grow: 1; // .menu__item
+    }
+
+    // .header__social-list
+    &__social-list {
+        color: $darkGray;
+        .social-list__link {
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $darkGrayHover;
+                }
+            }
+        }
+        @media (max-width: $phone  + px) {
+            margin-left: auto;
+        }
+        @media (max-width: 500 + px) {
+            margin: 0 auto;
+            column-gap: 40px;
+        }
+    }
+    // .header__navigation
+    &__navigation {
+        position: fixed;
+        right: 100%;
+        top: 45px;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        // transform: translate(-100%, 0);
+        transition: right 0.3s;
+        z-index: 10;
+        background-color: rgba(#000, 0.6);
+        @media (max-width: $smallPhone + px) {
+            top: 35px;
+        }
+    }
+    &__navigation-inner {
+        padding: 40px 0 40px 0;
+        background-color: #fff;
+    }
+    &__navigation-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu {
         .menu__list {
             justify-content: end;
             gap: 15px;
@@ -110,47 +155,6 @@
             }
         }
     }
-
-    // .header__social-list
-    &__social-list {
-        color: $darkGray;
-        .social-list__link {
-            @media (any-hover: hover) {
-                &:hover {
-                    color: $darkGrayHover;
-                }
-            }
-        }
-        @media (max-width: $phone  + px) {
-            margin-left: auto;
-        }
-        @media (max-width: 500 + px) {
-            margin: 0 auto;
-            column-gap: 40px;
-        }
-    }
-    // .header__navigation
-    &__navigation {
-        position: fixed;
-        left: 0;
-        top: 45px;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        transform: translate(-100%, 0);
-        transition: transform 0.3s;
-        z-index: 10;
-        background-color: rgba(#000, 0.6);
-        @media (max-width: $smallPhone + px) {
-            top: 35px;
-        }
-    }
-    &__navigation-inner {
-        padding: 40px 0 40px 0;
-        display: flex;
-        flex-direction: column;
-        background-color: #fff;
-    }
 }
 .menu--open {
     overflow: hidden;
@@ -158,7 +162,8 @@
         font-size: 18px;
     }
     .header__navigation {
-        transform: translate(0%, 0);
+        // transform: translate(0%, 0);
+        right: 0;
         &::before {
             content: "";
         }

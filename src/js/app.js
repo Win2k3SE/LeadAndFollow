@@ -5,7 +5,7 @@ import { burger } from "./modules/burger.js"
 burger()
 
 import { DynamicAdapt } from "./modules/dynamic-adapt.js"
-const da = new DynamicAdapt("max")
+const da = new DynamicAdapt("min")
 da.init()
 
 import { servicesResizer } from "./modules/resizer.js"

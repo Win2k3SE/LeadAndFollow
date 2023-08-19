@@ -3,25 +3,28 @@
         <a href="./" class="header__logo">
             <img src="@img/header/logo.svg" width="329" height="80" class="header__logo-image" alt="Lead & Follow Dance Studio">
         </a>
-        <nav class="header__menu menu" data-da=".header__navigation-inner,768,first">
-            @@include('menu.html', {active: "@@active"})
+        <nav class="header__menu menu">
         </nav>
-        <ul class="header__social-list social-list" data-da=".header__navigation-inner,500,last">
-            <li class="social-list__item">
-                <a href="https://youtube.com" target="_blank" rel="nofollow" class="social-list__link _icon-youtube" aria-label="See our Youtube channel"></a>
-            </li>
-            <li class="social-list__item">
-                <a href="https://facebook.com" target="_blank" rel="nofollow" class="social-list__link _icon-facebook" aria-label="Follow us on Facebook"></a>
-            </li>
-            <li class="social-list__item">
-                <a href="https://instagram.com" target="_blank" rel="nofollow" class="social-list__link _icon-instagram" aria-label="Follow us on Instagram"></a>
-            </li>
-        </ul>
+        
         <div class="icon-menu">
             <span></span>
         </div>
         <div class="header__navigation">
-            <div class="header__navigation-inner">
+            <div class="header__navigation-inner menu">
+                <div class="header__navigation-container" data-da=".header__menu,768.02,first">
+                @@include('menu.html', {active: "@@active"})
+            </div>
+            <ul class="header__social-list social-list" data-da=".header__container,500,2">
+                <li class="social-list__item">
+                    <a href="https://youtube.com" target="_blank" rel="nofollow" class="social-list__link _icon-youtube" aria-label="See our Youtube channel"></a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://facebook.com" target="_blank" rel="nofollow" class="social-list__link _icon-facebook" aria-label="Follow us on Facebook"></a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://instagram.com" target="_blank" rel="nofollow" class="social-list__link _icon-instagram" aria-label="Follow us on Instagram"></a>
+                </li>
+            </ul>
             </div>
         </div>
         <svg class="header__swosh" viewBox="0 0 432 41" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M432 0C333 4.8 249.5 40.4 140 41C105.4 40.8 85.4 36.5 18 20.7L0 16.1V0H432Z" fill="white"/></svg>
