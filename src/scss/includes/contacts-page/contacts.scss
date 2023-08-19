@@ -10,7 +10,10 @@
         &__map {
             @include avalue("height", 562 + 53, 500);
             @include avalue("padding-bottom", 53, 30);
-            margin-top: 20px;
+            margin-top: 70px;
+            @media (max-width: 768px) {
+                margin-top: 50px;
+            }
             iframe {
                 height: 100%;
                 z-index: 4;
