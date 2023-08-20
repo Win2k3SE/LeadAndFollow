@@ -368,6 +368,7 @@ address {
     }
     @media (max-width: $smallPhone + px) {
         margin: 20px auto;
+        height: 30px;
     }
     &-bullet {
         transition: all 0.5s;
@@ -382,7 +383,7 @@ address {
             text-align: center;
             display: inline-block;
             margin: auto 13px;
-            padding: 10px 0 0 0;
+            vertical-align: middle;
         }
         &-active {
             outline-color: $lightBlue;
