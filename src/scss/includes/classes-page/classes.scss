@@ -96,6 +96,8 @@
             transform: translate(-50%, 0);
             max-width: 100%;
             max-height: 127%;
+            height: auto;
+            width: auto;
             // outline: 5px solid red;
             @media (max-width: $phone + px) {
                 max-width: 75%;
